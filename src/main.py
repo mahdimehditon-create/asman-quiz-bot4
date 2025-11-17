@@ -2,7 +2,9 @@ from aiogram import Bot, Dispatcher
 from aiogram.webhook.aiohttp_server import SimpleRequestHandler, setup_application
 from aiohttp import web
 import os
-from handlers import router
+from .handlers import router
+from .ai_generator import generate_questions
+from .extractor import extract_text_from_file
 
 TOKEN = os.getenv("API_TOKEN")
 WEBHOOK_URL = os.getenv("RENDER_EXTERNAL_URL")
