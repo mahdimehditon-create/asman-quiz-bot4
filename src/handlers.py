@@ -23,7 +23,10 @@ async def handle_file(message: Message):
         return
 
     questions = generate_questions(text)
-    result = "
+    result = """
+این یه رشته چند‌خطی‌ه که خط بعدی هم داره
+"""
+
 
 ".join(questions)
     await message.reply(f"✅ سؤالات ساخته شد:
